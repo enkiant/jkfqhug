@@ -1,65 +1,65 @@
-<!DOCTYPE html>
+<!-- 简约版：全屏 NASA 背景 + 最少元素 -->
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Protect the Environment</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>简约静态页面</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: #333;
+    :root{
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
     }
-    .container {
-      text-align: center;
+    body{
+      margin:0;
+      padding:0;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      text-align:center;
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-image:url("https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000192/GSFC_20171208_Archive_e000192~orig.jpg"); /* Pillars of Creation */
     }
-    h1 {
-      font-weight: 300;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #fff;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    .overlay{
+      background:rgba(0,0,0,0.35);
+      padding:24px 32px;
+      border-radius:14px;
+      backdrop-filter:blur(6px);
+      max-width:520px;
     }
-    .circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 2px solid rgba(255,255,255,0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto 2rem auto;
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: #fff;
-      backdrop-filter: blur(2px);
+    h1{margin:0 0 10px 0;font-size:32px;font-weight:700}
+    p{margin:0 0 18px;font-size:15px;line-height:1.6;color:#e5e7eb}
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 12px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.28);
+      backdrop-filter:blur(4px);
+      color:white;
+      font-weight:600;
+      text-decoration:none;
     }
-    /* Add a dark overlay so text is readable on the photo */
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.35);
-    }
-    .wrap {
-      position: relative;
-      z-index: 1;
-      padding: 2rem;
+    a.btn::before{
+      content:"";
+      width:6px;
+      height:6px;
+      background:white;
+      border-radius:50%;
+      opacity:0.9;
     }
   </style>
 </head>
 <body>
-  <div class="overlay" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="container">
-      <div class="circle">Eco</div>
-      <h1>Protect the Environment</h1>
-    </div>
+  <div class="overlay">
+    <h1>Stunning</h1>
+    <p>A wonderful world awaits your discovery</p>
+    <a class="btn" href="#">Follow me</a>
   </div>
 </body>
 </html>
